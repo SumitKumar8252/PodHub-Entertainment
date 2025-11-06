@@ -3,7 +3,7 @@ import { motion as Motion } from "framer-motion";
 
 export default function PodcastCard({ episode }) {
   return (
-    <motion.div
+    <Motion.main
       className="card overflow-hidden"
       whileHover={{ y: -4 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -18,6 +18,6 @@ export default function PodcastCard({ episode }) {
         </div>
         <Link to={`/podcast/${episode._id}`} className="btn btn-primary mt-4 w-full">Listen</Link>
       </div>
-    </motion.div>
+    </Motion.main>
   );
 }

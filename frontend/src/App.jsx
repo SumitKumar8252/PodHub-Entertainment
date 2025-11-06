@@ -20,7 +20,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <motion.main
+      <Motion.main
         className="container mx-auto w-full px-4 py-6 flex-1"
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
@@ -48,7 +48,7 @@ export default function App() {
           <Route path="/podcast/:id" element={<PodcastDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </motion.main>
+      </Motion.main>
       <Footer />
     </div>
   );
