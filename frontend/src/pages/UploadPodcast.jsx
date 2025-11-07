@@ -18,7 +18,7 @@ export default function UploadPodcast() {
       audio.addEventListener("loadedmetadata", () => {
         URL.revokeObjectURL(url);
         const d = audio.duration;
-        if (isNaN(d)) return resolve(true); // backend will enforce
+        if (isNaN(d)) return resolve(true); // backend will enforce here
         if (d <= 180.5) resolve(true);
         else reject(new Error("Audio must be 3 minutes (180s) or less."));
       }, { once: true });
