@@ -59,7 +59,7 @@ exports.getOne = async (req, res) => {
     );
     if (!e) return res.status(404).json({ message: "Episode not found" });
 
-    // increment play count (naive)
+    // increment play count 
     e.playCount += 1;
     await e.save();
 

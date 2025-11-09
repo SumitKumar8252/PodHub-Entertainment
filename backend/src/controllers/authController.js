@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const User = require("../models/User"); // ✅ FIXED CASE
+const User = require("../models/User"); 
 
 function sign(u) {
   return jwt.sign(
